@@ -1,0 +1,36 @@
+{
+  "name": "gcf-accessibility-check",
+  "version": "1.0.0",
+  "description": "Accessibility checks implemented as a Google Cloud Function",
+  "main": "index.js",
+  "scripts": {
+    "test": "tsc test/accessibility.spec.ts",
+    "test-mocha": "MOCHA_FILE=./results/test-results.xml ./node_modules/.bin/mocha -r ts-node/register 'test/a11y.spec.ts' --recursive --reporter mocha-junit-reporter --timeout 60000 --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monch1962/gcf-accessibility-check.git"
+  },
+  "author": "David Mitchell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monch1962/gcf-accessibility-check/issues"
+  },
+  "homepage": "https://github.com/monch1962/gcf-accessibility-check#readme",
+  "devDependencies": {
+    "@types/jasmine": "^2.6.0",
+    "axe-playwright": "^1.1.8",
+    "playwright": "^1.10.0"
+  },
+  "dependencies": {
+    "chai": "^4.3.4",
+    "eslint": "^7.25.0",
+    "mocha": "^8.3.2",
+    "mocha-junit-reporter": "^2.0.0",
+    "npm": "^7.11.2",
+    "playwright-aws-lambda": "^0.6.0",
+    "playwright-core": "^1.10.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  }
+}
