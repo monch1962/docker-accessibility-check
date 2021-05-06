@@ -1,6 +1,6 @@
 import { Browser, Page } from 'playwright/types/types';
-//import { chromium } from 'playwright';
-import { launchChromium } from 'playwright-aws-lambda';
+import { chromium } from 'playwright';
+//import { launchChromium } from 'playwright-aws-lambda';
 import { describe } from 'mocha';
 import * as fs from 'fs';
 import { AxePlugin, AxeResults } from 'axe-core';
@@ -16,8 +16,8 @@ let browser: Browser;
 let page: Page;
 
 beforeEach(async () => {
-    //browser = await chromium.launch();
-    browser = await launchChromium();
+    browser = await chromium.launch();
+    //browser = await launchChromium();
     page = await browser.newPage();
 });
 

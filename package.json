@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/monch1962/gcf-accessibility-check#readme",
   "devDependencies": {
+    "@types/chai": "^4.2.17",
     "@types/jasmine": "^2.6.0",
+    "@types/mocha": "^8.2.2",
     "axe-playwright": "^1.1.8",
     "playwright": "^1.10.0"
   },
