@@ -20,7 +20,9 @@
   "homepage": "https://github.com/monch1962/gcf-accessibility-check#readme",
   "devDependencies": {
     "axe-playwright": "^1.1.8",
-    "playwright": "^1.10.0"
+    "playwright": "^1.10.0",
+    "sinon": "^10.0.0",
+    "uuid": "^8.3.2"
   },
   "dependencies": {
     "@types/mocha": "^8.2.2",
