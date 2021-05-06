@@ -5,6 +5,7 @@ import { describe } from 'mocha';
 import * as fs from 'fs';
 import { AxePlugin, AxeResults } from 'axe-core';
 import { expect } from 'chai';
+
 //import {} from 'jasmine'
 
 declare global {
@@ -20,7 +21,7 @@ beforeEach(async () => {
     browser = await chromium.launch();
     //browser = await launchChromium();
     page = await browser.newPage();
-});
+})
 
 afterEach(async () => {
     await page.close();
@@ -36,4 +37,4 @@ describe('evaluate accessibility', async () => {
         console.log(evaluationResult.violations)
         expect(evaluationResult.violations).to.be.empty;
     });
-});
+}).timeout(10000);

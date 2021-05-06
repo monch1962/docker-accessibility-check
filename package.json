@@ -4,7 +4,7 @@
   "description": "Accessibility checks implemented as a Google Cloud Function",
   "main": "index.js",
   "scripts": {
-    "test": "tsc test/a11y.spec.ts && mocha test/a11y.spec.js",
+    "test": "tsc test/a11y.spec.ts && mocha --timeout 20000 test/a11y.spec.js",
     "test-mocha": "MOCHA_FILE=./results/test-results.xml ./node_modules/.bin/mocha -r ts-node/register 'test/a11y.spec.ts' --recursive --reporter mocha-junit-reporter --timeout 60000 --exit"
   },
   "repository": {
