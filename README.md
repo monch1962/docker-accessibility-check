@@ -7,5 +7,5 @@
 
 ## To run from GCP ECR
 
-`$ docker pull gcr.io/check-accessibility/check-accessibility`
+`$ docker pull gcr.io/check-accessibility/check-accessibility:0.1`
 `$ docker run gcr.io/check-accessibility/check-accessibility:0.1`
