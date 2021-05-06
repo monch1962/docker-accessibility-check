@@ -12,4 +12,5 @@ RUN npm ci
 COPY . .
 #CMD ["node", "app.js"]
 #CMD ["./node_modules/.bin/tsc", "test/a11y.spec.ts"]
-CMD ["npm", "run", "test-mocha"]
+#CMD ["npm", "run", "test-mocha"]
+CMD ["npm", "run", "cmd-line"]
