@@ -26,6 +26,7 @@ let page: Page
     const file: string = fs.readFileSync(require.resolve('axe-core/axe.min.js'), 'utf8')
     await page.evaluate((minifiedAxe: string) => window.eval(minifiedAxe), file)
     const evaluationResult: AxeResults = await page.evaluate(() => window.axe.run(window.document))
+    process.exitCode = evaluationResult.violations.length
     console.log(JSON.stringify(evaluationResult.violations, null, 2))
     await page.close()
     await browser.close()
