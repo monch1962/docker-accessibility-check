@@ -1,5 +1,5 @@
 {
-  "name": "gcf-accessibility-check",
+  "name": "docker-accessibility-check",
   "version": "1.0.0",
   "description": "Accessibility checks implemented as a Google Cloud Function",
   "main": "index.js",
@@ -10,29 +10,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/monch1962/gcf-accessibility-check.git"
+    "url": "git+https://github.com/monch1962/docker-accessibility-check.git"
   },
   "author": "David Mitchell",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/monch1962/gcf-accessibility-check/issues"
+    "url": "https://github.com/monch1962/docker-accessibility-check/issues"
   },
-  "homepage": "https://github.com/monch1962/gcf-accessibility-check#readme",
+  "homepage": "https://github.com/monch1962/docker-accessibility-check#readme",
   "devDependencies": {
     "axe-playwright": "^1.1.8",
-    "playwright": "^1.10.0",
-    "sinon": "^10.0.0",
     "uuid": "^8.3.2"
   },
   "dependencies": {
-    "@types/mocha": "^8.2.2",
-    "chai": "^4.3.4",
     "eslint": "^7.25.0",
-    "mocha": "^8.3.2",
-    "mocha-junit-reporter": "^2.0.0",
-    "npm": "^7.11.2",
-    "playwright-aws-lambda": "^0.6.0",
-    "playwright-core": "^1.10.0",
+    "playwright": "^1.10.0",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
   }
