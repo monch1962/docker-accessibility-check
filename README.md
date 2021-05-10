@@ -28,6 +28,8 @@ Like many non-trivial open-source tools, this tool is built on top of a whole bu
 ### To run from a local copy
 `$ docker run -e URL=https://jsonplaceholder.typicode.com -v $(pwd)/results:/usr/src/app/results check-accessibility:latest`
 
+You'll then see accessibility violations in JSON and HTML formats under the `~/results` directory
+
 ### To push to GCP ECR
 `$ docker build -t check-accessibility .`
 
@@ -39,3 +41,5 @@ Like many non-trivial open-source tools, this tool is built on top of a whole bu
 `$ docker pull gcr.io/check-accessibility/check-accessibility:0.1`
 
 `$ docker run -e URL=https://jsonplaceholder.typicode.com -v $(pwd)/results:/usr/src/app/results gcr.io/check-accessibility/check-accessibility:0.1`
+
+You'll then see accessibility violations in JSON and HTML formats under the `~/results` directory
