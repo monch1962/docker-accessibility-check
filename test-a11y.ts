@@ -1,7 +1,7 @@
 import { Browser, Page } from 'playwright/types/types'
+import {} from 'fs'
 
 import { chromium } from 'playwright'
-//import { launchChromium } from 'playwright-aws-lambda'
 
 import * as fs from 'fs'
 import { AxePlugin, AxeResults } from 'axe-core'
@@ -27,6 +27,10 @@ let page: Page
     await page.evaluate((minifiedAxe: string) => window.eval(minifiedAxe), file)
     const evaluationResult: AxeResults = await page.evaluate(() => window.axe.run(window.document))
     process.exitCode = evaluationResult.violations.length
+
+    //const results_json = JSON.stringify(evaluationResult.violations, null, 2)
+    //await fs.writeFileSync('./results/accessibility-violations.json', results_json)
+
     console.log(JSON.stringify(evaluationResult.violations, null, 2))
     await page.close()
     await browser.close()
