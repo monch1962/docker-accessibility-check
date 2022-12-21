@@ -23,7 +23,7 @@
     "uuid": "^8.3.2"
   },
   "dependencies": {
-    "@naturalcycles/json2html": "^1.1.0",
+    "@naturalcycles/json2html": "^1.1.1",
     "eslint": "^7.25.0",
     "playwright": "^1.10.0",
     "ts-node": "^9.1.1",
